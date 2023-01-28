@@ -33,3 +33,18 @@ function copyPassword() {
   copyText.select();
   document.execCommand("copy");  
 }
+
+function SavePassword(){
+  var saveText = document.getElementById("password").value;
+if (saveText) {
+  localStorage.setItem("password",saveText)
+}
+
+
+}
+
+function GetPassword(){
+  var getText =  localStorage.getItem("password")
+
+  document.getElementById("password").value=getText
+}
