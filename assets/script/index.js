@@ -1,18 +1,3 @@
-// function foo(){
-
-//     var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//     var passwordLength =17;
-//     var password = "";
-       
-//     for (var i = 0; i <= passwordLength; i++) {
-//       var randomNumber = Math.floor(Math.random() * chars.length);
-//       password += chars.substring(randomNumber, randomNumber +1);
-//      }
-      
-//       return password
-//     }
-//     let x=foo()
-//     console.log(x)
 
 
 var password=document.getElementById("password");
@@ -34,7 +19,7 @@ function copyPassword() {
   document.execCommand("copy");  
 }
 
-function SavePassword(){
+function savePassword(){
   var saveText = document.getElementById("password").value;
 if (saveText) {
   localStorage.setItem("password",saveText)
@@ -43,7 +28,7 @@ if (saveText) {
 
 }
 
-function GetPassword(){
+function getPassword(){
   var getText =  localStorage.getItem("password")
 
   document.getElementById("password").value=getText
